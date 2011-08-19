@@ -1,0 +1,38 @@
+<?php
+
+include "sziv_mapview.php";
+
+function sziv_mapview_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#simple':
+      return t('This sentence contains all the letters in the English alphabet.');
+  }
+}
+
+/*
+function sziv_mapview_permission() {
+  return array(
+    'access simple page' => array(
+      'title' => t('Access simple page'),
+      'description' => t('Allow users to access simple page'),
+    ),
+    'access arguments page' => array(
+      'title' => t('Access page with arguments'),
+      'description' => t('Allow users to access page with arguments'),
+    ),
+  );
+}
+*/
+
+function sziv_mapview_menu() {
+
+  $items['Szivesseg volunteers/sziv_mapview'] = array(
+    'title' => 'Mapview',
+    'page callback' => 'sziv_mapview_main',
+    'access callback' => TRUE,
+    'expanded' => TRUE,
+    'menu_name' => 'main-menu',
+  );
+
+  return $items;
+}

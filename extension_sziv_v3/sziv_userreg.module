@@ -1,0 +1,38 @@
+<?php
+
+include "sziv_userreg.php";
+
+function sziv_userreg_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#simple':
+      return t('This sentence contains all the letters in the English alphabet.');
+  }
+}
+
+/*
+function sziv_userreg_permission() {
+  return array(
+    'access simple page' => array(
+      'title' => t('Access simple page'),
+      'description' => t('Allow users to access simple page'),
+    ),
+    'access arguments page' => array(
+      'title' => t('Access page with arguments'),
+      'description' => t('Allow users to access page with arguments'),
+    ),
+  );
+}
+*/
+
+function sziv_userreg_menu() {
+
+  $items['Szivesseg volunteers/sziv_userreg'] = array(
+    'title' => 'Sign up',
+    'page callback' => 'sziv_userreg_main',
+    'access callback' => TRUE,
+    'expanded' => TRUE,
+    'menu_name' => 'main-menu',
+  );
+
+  return $items;
+}

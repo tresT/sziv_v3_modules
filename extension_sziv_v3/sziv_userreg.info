@@ -1,0 +1,11 @@
+name = Szivesseg[userreg]
+description = Module to connect szivesseg v3 core - user registration to drupal
+package = Szivesseg volunteers
+core = 7.x
+files[] = "sziv_userreg.php"
+
+; Information added by drupal.org packaging script on 2011-07-18
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "Szivesseg volunteers"
+datestamp = "1313734236"
